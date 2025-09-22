@@ -1,0 +1,23 @@
+{
+  "name": "Codespaces + noVNC + JavaFX",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+  "features": {},
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "noVNC",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/install_desktop.sh",
+  "postStartCommand": "bash .devcontainer/start_desktop.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven"
+      ]
+    }
+  }
+}
